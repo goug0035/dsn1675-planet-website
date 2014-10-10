@@ -42,6 +42,14 @@ body {
   text-align: center;
 }
 
+.lighter {
+    background-color: #efefef;
+}
+
+.gray {
+    background-color: #e2e2e2;
+}
+
 .nav {
   padding: 0;
 }
@@ -89,5 +97,10 @@ body {
     float: left;
   }
 
+}
+
+.intro {
+    background-color: #e2e2e2;
+    text-align: center;
 }
 
