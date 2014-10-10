@@ -9,7 +9,6 @@ html {
   padding: 0;
   box-sizing: border-box;
 
-  font: normal 100%/1.5 sans-serif;
   -moz-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -25,56 +24,75 @@ body {
   padding: 0;
 }
 
-img {
+.img-flex {
   display: block;
   width: 100%;
 }
 
-header {
-    background-color: #ccc;
-    overflow: hidden;
+.masthead {
+  overflow: hidden;
+
+  background-color: #ccc;
 }
 
-h1 {
-    text-align: center;
-    margin: 0;
+.title {
+  display: block;
+  margin: 0;
+
+  text-align: center;
 }
 
 .nav {
-    padding: 0;
-    list-style-type: none;
+  padding: 0;
 }
 
-.nav a {
-    display: block;
-    text-decoration: none;
+.nav li {
+  display: block;
 }
 
+.nav a,
+.nav a:link,
+.nav a:visited {
+  display: block;
 
-@media only screen and (min-width: 20em) {
-    
-    .nav li {
-        display: inline-block;
-    }
-    
-    .nav {
-        text-align: center;
-    }
+  color: #0074D9;
+  text-decoration: none;
 }
-    
-@media only screen and (min-width: 40em) {  
-    
-    .nav {
-        float: left;
-        
-    }
-    
-    h1 {
-        float: left;
-    }
-    
-    .nav li {
-        
-    }
+
+.nav a:hover,
+.nav a:focus,
+.nav a:active {
+  background-color: #0074D9;
+
+  color: #fff;
 }
-    
+
+@media only screen and (min-width: 25em) {
+
+  .nav {
+    text-align: center;
+  }
+
+  .nav li {
+    display: inline-block;
+  }
+
+}
+
+@media only screen and (min-width: 38em) {
+
+  .title {
+    float: left;
+  }
+
+  .nav {
+    float: left;
+  }
+
+}
+
+.intro {
+  background-color: #e2e2e2;
+
+  text-align: center;
+}
