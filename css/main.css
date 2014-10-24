@@ -15,6 +15,30 @@ html {
   text-size-adjust: 100%;
 }
 
+@media only screen and (min-width: 60em) {
+
+  html {
+    font-size: 110%;
+  }
+
+}
+
+@media only screen and (min-width: 90em) {
+
+  html {
+    font-size: 120%;
+  }
+
+}
+
+@media only screen and (min-width: 120em) {
+
+  html {
+    font-size: 130%;
+  }
+
+}
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -24,6 +48,53 @@ body {
   padding: 0;
 }
 
+.skip-links {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.skip-links a {
+    position: absolute;
+    top: -3em;
+    padding: 0.5em 0.75em;
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.25em;
+    text-decoration: none;
+}
+
+skip-links a:focus {
+    top:0;
+}
+
+.top-link a:focus {
+    bottom: 0;
+}
+
+.top-link a {
+    position: absolute;
+    bottom: -3em;
+    padding: 0.5em 0.75em;
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.25em;
+    text-decoration: none;
+}
+
+a:link'
+a:active {
+    outline: none;
+}
+
+/* this is ok to get rid of the focus rectange for mouse */
+
+a:focus {
+    outline: 3px solid #000;
+}
+    
 .img-flex {
   display: block;
   width: 100%;
@@ -31,23 +102,10 @@ body {
 
 .masthead {
   overflow: hidden;
-
-  background-color: #ccc;
 }
 
 .title {
-  display: block;
-  margin: 0;
-
   text-align: center;
-}
-
-.lighter {
-    background-color: #efefef;
-}
-
-.gray {
-    background-color: #e2e2e2;
 }
 
 .nav {
@@ -75,6 +133,30 @@ body {
   color: #fff;
 }
 
+.section-dark {
+  background-color: #ccc;
+}
+
+.section-mid {
+  background-color: #e2e2e2;
+}
+
+.section {
+  background-color: #efefef;
+}
+
+.intro {
+  text-align: center;
+}
+
+.discovery-title-extra {
+  display: none;
+}
+
+.copyright {
+  text-align: center;
+}
+
 @media only screen and (min-width: 25em) {
 
   .nav {
@@ -85,22 +167,75 @@ body {
     display: inline-block;
   }
 
+  .nav-footer a,
+  .nav-footer a:link,
+  .nav-footer a:visited {
+    display: inline-block;
+  }
+
+  .nav-footer li::after {
+    content: "·";
+    display: inline-block;
+    width: 0.5em;
+
+    color: #666;
+    text-align: right;
+  }
+
+  .nav-footer li:last-child::after {
+    content: none;
+  }
+
+  .discovery-title-extra {
+    display: inline;
+  }
+
 }
 
 @media only screen and (min-width: 38em) {
 
-  .title {
-    float: left;
-  }
-
+  .title,
   .nav {
-    float: left;
+    text-align: left;
+  }
+
+  .discovery-text {
+    padding-right: 1.5rem;
+  }
+
+  .copyright {
+    text-align: left;
+  }
+
+  .nav-footer {
+    text-align: right;
   }
 
 }
 
-.intro {
-    background-color: #e2e2e2;
-    text-align: center;
-}
+@media only screen and (min-width: 60em) {
 
+  .moon-text {
+    padding-left: 1.5rem;
+  }
+
+  .stats {
+    overflow: hidden;
+  }
+
+  .stats > dt {
+    clear: left;
+    float: left;
+    margin-right: 0.75rem;
+    width: 11em;
+  }
+
+  .stats > dd {
+    float: left;
+  }
+
+  .discovery-text {
+    padding-left: 1.5rem;
+  }
+
+}
