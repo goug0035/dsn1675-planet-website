@@ -56,7 +56,7 @@ body {
 
 .skip-links a {
     position: absolute;
-    top: -3em;
+    top: -5em;
     padding: 0.5em 0.75em;
     background-color: #000;
     color: #fff;
@@ -80,13 +80,45 @@ body {
 }
 
 .top-link a {
-    position: absolute;
     padding: 0.5em 0.75em;
-    background-color: #000;
-    color: #fff;
-    font-weight: bold;
-    font-size: 1.25em;
+    font-size: 1em;
     text-decoration: none;
+}
+
+label {
+    display: block;
+}
+
+input + label {
+    display: inline-block;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+.field {
+    width: 100%;
+    padding: .5rem;
+}
+
+.form {
+    max-width: 45rem;
+    margin: auto;
+}
+
+.radio {
+    white-space: nowrap;
+    margin-right: 1.5rem;
+}
+
+textarea {
+    height: 11rem;
+}
+
+.button-box {
+    text-align: center;
 }
 
 a:link'
